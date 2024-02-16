@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Rating</th>
+        <th>Email</th>
+        <th>Developed</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for std in univer %}
+      
+      <tr>
+        <td>{{std.pk}}</td>
+        <td>{{std.name}}</td>
+        <td>{{std.region}}</td>
+        <td>{{std.rating}}</td>
+        <td>{{std.email}}</td>
+        <td>{{std.developed}}</td>
+      </tr>
+      
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock content %}
+
+

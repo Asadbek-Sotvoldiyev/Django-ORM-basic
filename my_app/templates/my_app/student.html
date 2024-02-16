@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Major</th>
+        <th>Email</th>
+        <th>Level</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for std in student %}
+      
+      <tr>
+        <td>{{std.pk}}</td>
+        <td>{{std.name}}</td>
+        <td>{{std.age}}</td>
+        <td>{{std.major}}</td>
+        <td>{{std.email}}</td>
+        <td>{{std.kursi}}</td>
+      </tr>
+      
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock content %}
+
+

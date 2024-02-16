@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Car model</th>
+        <th>City</th>
+        <th>Make of</th>
+        <th>Color</th>
+        <th>Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for std in cars %}
+      
+      <tr>
+        <td>{{std.pk}}</td>
+        <td>{{std.name}}</td>
+        <td>{{std.region}}</td>
+        <td>{{std.model}}</td>
+        <td>{{std.color}}</td>
+        <td>{{std.developed}}</td>
+      </tr>
+      
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock content %}
+
+

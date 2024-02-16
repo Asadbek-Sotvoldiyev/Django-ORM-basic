@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Major</th>
+        <th>Email</th>
+        <th>phone number</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for teach in teacher %}
+      
+      <tr>
+        <td>{{teach.pk}}</td>
+        <td>{{teach.name}}</td>
+        <td>{{teach.age}}</td>
+        <td>{{teach.profession}}</td>
+        <td>{{teach.email}}</td>
+        <td>{{teach.phone}}</td>
+      </tr>
+      
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock content %}
+
+
